@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE elementos[
+<!ELEMENT elementos (objetos,personajes,niveles)>
+<!ELEMENT objetos (monedas,botines,recuerdos,miscelaneos,armas)>
+<!ELEMENT monedas (moneda+)>
+<!ELEMENT moneda (nombre,descripcion,imagen,obtencion,usos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT obtencion (#PCDATA)>
+<!ELEMENT usos (#PCDATA)>
+<!ELEMENT botines (botin+)>
+<!ELEMENT botin (nombre,descripcion,imagen,obtencion,usos)>
+<!ELEMENT recuerdos (recuerdo+)>
+<!ELEMENT recuerdo (nombre,descripcion,imagen,efecto,mensaje)>
+<!ELEMENT mensaje (#PCDATA)>
+<!ELEMENT miscelaneos (miscelaneo+)>
+<!ELEMENT miscelaneo (nombre,descripcion,imagen,obtencion,notas,mejoras?)>
+<!ELEMENT mejoras (mejora+)>
+<!ELEMENT mejora (nombre,descripcion)>
+<!ELEMENT armas (arma+)>
+<!ELEMENT arma (nombre,descripcion,imagen,estilodecombate,estadisticas,aspectos)>
+<!ELEMENT estilodecombate (#PCDATA)>
+<!ELEMENT estadisticas (#PCDATA)>
+<!ELEMENT aspectos (aspecto+)>
+<!ELEMENT aspecto (nombre,descripcion)>
+<!ELEMENT personajes (personaje+)>
+<!ELEMENT personaje (nombre,descripcion,imagen,bendiciones?,combate?,notas)>
+<!ELEMENT notas (#PCDATA)>
+<!ELEMENT combate (#PCDATA)>
+<!ELEMENT bendiciones (bendicion+)>
+<!ELEMENT bendicion (nombre,efecto)>
+<!ELEMENT efecto (#PCDATA)>
+<!ELEMENT niveles (nivel+)>
+<!ELEMENT nivel (nombre,imagen,trampas,minijefes,jefes,enemigos)>
+<!ELEMENT trampas (trampa+)>
+<!ELEMENT trampa (#PCDATA)>
+<!ELEMENT minijefes (minijefe+)>
+<!ELEMENT minijefe (nombre,descripcion)>
+<!ELEMENT jefes (jefe+)>
+<!ELEMENT jefe (nombre,descripcion)>
+<!ELEMENT enemigos (enemigo+)>
+<!ELEMENT enemigo (nombre,descripcion)>
+]>
+<elementos>
+    <objetos>
+        <monedas>
+            <moneda>
+                <nombre>Óbolo de Caronte</nombre>
+                <descripcion>El óbolo de Caronte es una de las divisas para artefactos disponibles en el Inframundo. A diferencia de todas las demás monedas, Zagreo perderá todos sus Óbolos cuando muera.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/1/10/Charon%27s_Obol.png/revision/latest?cb=20181213004744</imagen>
+                <obtencion>Los Óbolos se obtienen como recompensa por limpiar una habitacion, derrotar enemigos en eventos y como recompensa de cofres infernales.</obtencion>
+                <usos>Los Óbolos se pueden usar en la tienda de Caronte o en un Pozo de Caronte para comprar varios artículos.</usos>
+            </moneda>
+            <moneda>
+                <nombre>Oscuridad</nombre>
+                <descripcion>La oscuridad es una de las varias monedas artefactos que se pueden encontrar dentro del Inframundo. Se utiliza principalmente para mejorar el poder de Zagreo en el Espejo de la Noche.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/c/c0/Darkness.png/revision/latest?cb=20181212011512</imagen>
+                <obtencion>La oscuridad se obtiene como recompensa por limpiar una habitacion, derrotar enemigos en eventos y como recompensa de cofres infernales.</obtencion>
+                <usos>Mejoras permanentes de talentos en el Espejo de la Noche, ofertas por tiempo limitado con el agente desdichado, el favor de Nyx, mejora del rango de Zagreo y el tema infinito del contratista de la casa.</usos>
+            </moneda>
+        </monedas>
+        <botines>
+            <botin>
+                <nombre>Sangre de titán</nombre>
+                <descripcion>La sangre de titán es una de las varias monedas de artefactos que se pueden ganar dentro del Inframundo. Junto con diamantes y Ambrosia,son un recurso obtenido a través de recompensas. Se utiliza principalmente para desbloquear y actualizar los aspectos de armas en el patio de la Casa del Hades,lo que permite a Zagreo personalizar su arsenal de armas infernales.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/5/59/Titan_Blood.png/revision/latest?cb=20191216092242</imagen>
+                <obtencion>La sangre de titán se obtiene al derrotar al primer y ultimo jefe con cada arma</obtencion> 
+                <usos>La sangre de titán se utiliza para revelar y actualizar aspectos de las armas infernales</usos>
+            </botin>
+            <botin>
+                <nombre>Diamantes</nombre>
+                <descripcion>Los diamantes son una de las varias monedas de artefactos que se pueden ganar dentro del Inframundo. Junto con sangre de titán y Ambrosia,son un recurso obtenido a través de recompensas. </descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/e/ea/Diamond.png/revision/latest?cb=20191013201337</imagen>
+                <obtencion>Los diamantes se pueden obtener obtener completando algunas profecias. Además, tambien se obtienen al vencer al segundo jefe, la hidra.</obtencion>
+                <usos>Los diamantes se pueden usar para comprar mejoras de nivel superior del contratista de la casa,como un soporte de música para escuchar música, favores de personajes en progreso o bonificaciones para recoger recursos en intentos de escape.</usos>
+            </botin>
+            <botin>
+                <nombre>Ambrosia</nombre>
+                <descripcion>Ambrosia es una de las varias monedas artefactos que se pueden ganar dentro del Inframundo. Junto con diamantes y sangre de titan,son un recurso obtenido a través de recompensas. Se utiliza principalmente como un regalo especial para aquellos que han profundizado los lazos con Zagreo.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/a/a2/Ambrosia.png/revision/latest?cb=20191205191640</imagen>
+                <obtencion>La ambrosia se obtiene al vencer al tercer jefe del juego y como recompensa por escapar del Elíseo</obtencion>
+                <usos>La ambrosia se usa para mejorar el rango de afinidad de Zagreo con otros personajes y avanzar con sus relaciones.</usos>
+            </botin>
+        </botines>
+        <recuerdos>
+            <recuerdo>
+                <nombre>Viejo collar de pinchos</nombre>
+                <descripcion>Recuerdo obtenido por Cerbero que aumenta la vida maxima de Zagreo.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/e/ed/Old_Spiked_Collar.png/revision/latest?cb=20181214232216</imagen>
+                <efecto>Gana 25/38/50 de vida extra.</efecto>
+                <mensaje>El sabueso del infierno ha confiado toda su lealtad en su amo, y en el hijo de su amo.</mensaje>
+            </recuerdo>
+            <recuerdo>
+                <nombre>Brazalete de mirmidón</nombre>
+                <descripcion>Recuerdo obtenido por Aquiles que reduce el daño recibido por delante pero aumenta el daño por la espalda.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/9/92/Myrmidon_Bracer.png/revision/latest?cb=20181214232107</imagen>
+                <efecto>Reduce un 20/25/30% el daño por delante pero aumenta un 10% el daño por la espalda</efecto>
+                <mensaje>Destinado a la gloria, él será recordado para siempre, y te recordará.</mensaje>
+            </recuerdo>
+            <recuerdo>
+                <nombre>Granada en flor</nombre>
+                <descripcion>Recuerdo obtenido por Perséfone que aumenta un nivel una bendición aleatoria al limpiar cierto numero de habitaciones.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/d/d1/Pom_Blossom.png/revision/latest?cb=20200925012154</imagen>
+                <efecto>Después de cada 6/5/4 encuentros,ganancia +1 Lv. (una Bendición aleatoria se hace más fuerte).</efecto>
+                <mensaje>Los muertos viven en el inframundo, y su instinto de crianza allí también prospera.</mensaje>
+            </recuerdo>
+        </recuerdos>
+        <miscelaneos>
+            <miscelaneo>
+                <nombre>Martillo de Dédalo</nombre>
+                <descripcion>El martillo de Dédalo es un artefacto que mejora tu arma actualizando sus ataques. Por cada intento de huida, se pueden obtener 2 martillos.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/3/3e/Daedalus_Hammer.png/revision/latest?cb=20181212011510</imagen>
+                <obtencion>Se puede obtener como recompensa al limpiar una habitación. Solo se puede obtener un máximo de 2 martillos por tentativa de huida. Si se obtiene un martillo en el Tártaro o en los Asfódelos, el segundo martillo aparecera siempre en el Elíseo.</obtencion>
+                <notas>Las mejoras del martillo varian de un arma a otra, unas con ajustes menores y otras cambiando el estilo de juego del arma por completo</notas>
+                <mejoras>
+                    <mejora>
+                        <nombre>Espada rompearmaduras</nombre>
+                        <descripcion>+300% de daño de tu espada contra armaduras.</descripcion>
+                    </mejora>
+                    <mejora>
+                        <nombre>Súper Nova</nombre>
+                        <descripcion>El área del ataque especial de tu espada es más grande e infliges +20% de daño.</descripcion>
+                    </mejora>
+                    <mejora>
+                        <nombre>Tajo maldito</nombre>
+                        <descripcion>Recuperas 2 puntos de vida con cada ataque de tu espada, pero tienes un 60% menos de vida.</descripcion>
+                    </mejora>
+                    <mejora>
+                        <nombre>Disparo certero</nombre>
+                        <descripcion>Tu ataque con arco inflige hasta +200% de daño a enemigos lejanos.</descripcion>
+                    </mejora>
+                    <mejora>
+                        <nombre>Disparo explosivo</nombre>
+                        <descripcion>Tu Estándar con el arco inflige 300 puntos de daño de área, pero se carga más lentamente.</descripcion>
+                    </mejora>
+                    <mejora>
+                        <nombre>Ráfaga perforante</nombre>
+                        <descripcion>Tu Especial con el arco atraviesa a los enemigos y hace +400% de daño a enemigos.</descripcion>
+                    </mejora>
+                </mejoras>
+            </miscelaneo>
+        </miscelaneos>
+        <armas>
+            <arma>
+                <nombre>Espada estigiana</nombre>
+                <descripcion>La espada estigiana es una de las armas infernales y es el arma inicial de Zagreo en Hades.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/f/f7/Stygian_Blade.png/revision/latest?cb=20181213044607</imagen>
+                <estilodecombate>Stygius es una espada larga con una mezcla de oscilaciones anchas y direccionales. Equilibra velocidad y fuerza, con ataques de medio alcance y un especial AoE. El especial crea una pequeña ráfaga, pero deja a Zagreo estacionario por un corto tiempo.</estilodecombate>
+                <estadisticas>Cuenta con 4 ataques: El ataque estandar que inflinge 20 de daño, el ataque especial que inflinge 50 de daño en área, el ataque acelerado que inflinge 30 de daño y el combo el cual inflinge un total de 75 de daño.</estadisticas>
+                <aspectos>
+                    <aspecto>
+                        <nombre>Aspecto de Zagreo</nombre>
+                        <descripcion>La forma en que la hoja del inframundo se reveló por primera vez.</descripcion>
+                    </aspecto>
+                    <aspecto>
+                        <nombre>Aspecto de Némesis</nombre>
+                        <descripcion>Durante 3 segundos después de usar el ataque especial, su ataque puede infligir daño crítico.</descripcion>
+                    </aspecto>
+                </aspectos>
+            </arma>
+            <arma>
+                <nombre>Arco buscacorazones</nombre>
+                <descripcion>El arco buscacorazones es una de las armas infernales y se desbloquea al progresar con las tentativas de huida.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/5/5c/Heart-Seeker_Bow.png/revision/latest?cb=20181213193638</imagen>
+                <estilodecombate>El arco ofrece ataques a distancia que golpean a los enemigos a distancia. El ataque principal se puede cargar para aumentar la distancia y el daño, liberando en el momento adecuado para daño adicional. El especial rocía flechas en un cono frente a ti.</estilodecombate>
+                <estadisticas>Cuenta con 4 ataques: El ataque estandar que inflinge de 20 a 60 de daño segun la carga, el ataque especial que dispara flechas en un cono inflingiendo 10 de daño por flecha, el ataque acelerado que inflinge de 20 a 40 de daño segun la carga y el ataque intensificado el cual, al liberar la flecha en el momento adecuado, hace 70 de daño adicional.</estadisticas>
+                <aspectos>
+                    <aspecto>
+                        <nombre>Aspecto de Zagreo</nombre>
+                        <descripcion>La forma en que el arco buscacorazones se reveló por primera vez.</descripcion>
+                    </aspecto>
+                    <aspecto>
+                        <nombre>Aspecto de Quirón</nombre>
+                        <descripcion>Las flechas disparas por el ataque especial van dirigidas automaticamente hacia el enemigo marcado por el ataque estándar.</descripcion>
+                    </aspecto>
+                </aspectos>
+            </arma>
+        </armas>
+    </objetos>
+    <personajes>
+        <personaje>
+                <nombre>Zagreo</nombre>
+                <descripcion>Zagreo, principe del Inframundo, es el hijo de Hades y protagonista del juego. Su misión es escapar de la morada de Hades, en contra de la voluntad de su padre, sin importar cuantos intentos le lleve.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/2/29/Zagreus.png/revision/latest?cb=20181210044005</imagen>
+                <notas>
+                    Zagreo tiene heterocromía, habiendo heredado un color de ojos de cada uno de sus padres (su ojo rojo del Hades y su ojo verde de Perséfone).
+                    Los dioses olímpicos no eran conscientes de la existencia de Zagreo hasta que fueron contactados por Nyx, a quien creen que es la madre de Zagreo.
+                    Dioniso comenta que Zagreo es su semidiósfavorito, mientras que Afrodita se refiere a él un ahijado y Artemisa lo llama un "medio dios", todo lo que implica que Zagreo no es visto por los olímpicos como un verdadero dios, posiblemente porque Nyx no es visto como una verdadera diosa.
+                    A pesar de la insistencia de Zagreo de que él no es "el dios de nada", Aquiles sostiene que cada dios, por definición, debe ser el dios de algo; como tal, teoriza que Zagreo podría ser el dios de la sangre y, por extensión, de la vida. Según Aquiles, esto explicaría el vínculo especial que Zagreo comparte con Thanatos a pesar de sus personalidades aparentemente incompatibles.
+                    Zagreo no sabe lo que son las aves.
+                </notas>
+        </personaje>
+        <personaje>
+                <nombre>Hades</nombre>
+                <descripcion>Hades es el dios del Inframundo y de las riquezas minerales de la tierra, el señor y amo de la Casa del Hades, y el padre de Zagreo. Él está a cargo de mantener el orden dentro del Inframundo, determinar las colocaciones y castigos de los muertos, y escuchar las peticiones de sombras que se le presentan.</descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/6/64/Hades.png/revision/latest?cb=20210207072259</imagen>
+                <combate>
+                    Hades tiene dos fases, cada una con su propio conjunto de ataques y habilidades. Durante la primera fase, desaparecerá y reaparecerá si Zagreo usa una Llamada, eliminando todos los efectos de estado. También convocará desgracias cuando su salud esté al 50% y al 20%. Sus ataques son los siguientes:
+                        Estocada: Hades se mueve hacia Zagreo, lance con su lanza. Con una salud más baja, lanzará dos yesos a un lado antes de lanzarse.
+                        Spin Attack: Con un amplio alcance, Hades se moverá hacia la posición de Zagreo, deslizando su lanza en un movimiento circular.
+                        Skull Cast: Similar a la propia habilidad bloodstone de Zagreo, puede dispararle un molde en forma de calavera con un ligero seguimiento. Si golpea a Zagreo, permanecerá en él durante varios segundos antes de desalojarse, dándole el debuff de Sangre Hirviendo, lo que le hará tomar +100% de daño durante la duración; si el cráneo no se destruye dentro de los 5 segundos después de perderse o desalojarse, detonará, creando una onda dañina con un gran radio a través de la arena.
+                        
+                    Cuando es llevado a la muerte por primera vez, se detendrá por un tiempo como si estuviera derrotado, antes de recuperar sus fuerzas, volver a llenar su barra de salud y comenzar su segunda fase desatando una ola dañina. Esta fase incluye nuevos ataques, como sigue:
+                    
+                        Swipe Combo: Hace 2 golpes con la lanza, siguiendo con un Spin Attack.
+                        Ataque Brimstone: Ataca con un láser Brimstone que dispara en tres direcciones. Cuando se reduce por debajo de la mitad de la salud, dispara en todas las direcciones en su lugar.
+                        Invocación de jarrón: Convoca jarrones distribuidos uniformemente alrededor de la arena. Cuando un jarrón se rompe por un ataque (ya sea de Zagreo o Hades), crea una pequeña zona de manos verdes que aturde y daña a Zagreo. Esto cuenta como una trampa.
+                </combate>
+                <notas>
+                    Zagreo: Hades tiene una amarga relación con su hijo, considerándolo una decepción. En el pasado, había probado varios métodos para endurecer a Zagreo y darle forma de acuerdo con sus ideales. Está profundamente disgustado por los intentos de Zagreo de escapar. Tras el regreso y el aliento de Perséfone, su relación se suaviza un poco, llegando a algo parecido a un respeto mutuo, aunque Zagreo aún no ha perdonado completamente a su padre, y Hades no espera el perdón por sus acciones. Hades finalmente hace que los intentos de escape de Zagreo sean una descripción oficial del trabajo para poner a prueba la seguridad del Inframundo.
+                    
+                    Cerbero: Cerbero parece ser el único compañero genuino de Hades y el indulto de su trabajo sin fin.
+
+                    Nyx: Hades y Nyx manejan el dominio, en su mayoría se toleran y se respetan a regañadientes, aunque parece que Hades tiene cierto poder sobre Nyx, ya que controla el castigo de titanes y dioses primordiales. Nyx parece tener algún tipo de acuerdo con Hades, para haber evitado un destino similar para sí misma.
+                    
+                    Perséfone: Su relación se desmoronó en algún momento en el pasado, en parte debido al aparente nacimiento de Zagreo. Perséfone abandonó el inframundo, mientras que Hades ocultó la verdad sobre ella a Zagreo y prohibió toda mención de ella en la Casa.
+                    
+                    Olímpicos: Hades una vez luchó junto a sus hermanos olímpicos para derrotar a los Titanes. Hoy en día, tiene una baja opinión de los olímpicos, y ha cortado la comunicación con ellos. En particular, parece resentirse de su hermano Zeus debido a disputas pasadas (y, como se revela más tarde, la razón por la que Perséfone inicialmente partió del Olimpo hacia el Inframundo).
+                </notas>
+        </personaje>
+         <personaje>
+                <nombre>Zeus</nombre>
+                <descripcion>
+                Zeus es el dios del cielo y el trueno, y el gobernante de los dioses olímpicos. Él ofrece bendiciones a Zagreo que le dan a sus habilidades una cadena de rayos o rayos.  Las bendiciones de Zeus sobresalen en infligir daño a grupos de enemigos, ya que los efectos de relámpagos en cadena rebotan entre los enemigos, y los rayos pueden golpear a varios enemigos.
+                </descripcion>
+                <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/3/3c/Zeus.png/revision/latest?cb=20200710034046</imagen>
+                <bendiciones>
+                    <bendicion>
+                        <nombre>Rayo</nombre>
+                        <efecto>Tu ataque emite un rayo de cadena cuando dañas a un enemigo que inflinge 10 de daño.</efecto>
+                    </bendicion>
+                    <bendicion>
+                        <nombre>Florecer del trueno</nombre>
+                        <efecto>Tu especial hace que un rayo golpee a los enemigos cercanos que inflinge 30 de daño.</efecto>
+                    </bendicion>
+                    <bendicion>
+                        <nombre>Relampagos de tormenta</nombre>
+                        <efecto>Los efectos de rayos de cadena rebotan más veces antes de expirar.</efecto>
+                    </bendicion>
+                    <bendicion>
+                        <nombre>Alto voltaje</nombre>
+                        <efecto>Los efectos de rayo infligen daño en un área más grande.</efecto>
+                    </bendicion>
+                </bendiciones>
+                <notas>
+                    En la superficie Zeus parece gregario, afable y paterno, especialmente en contraste con su hermano. Pero mientras que su hermano Hades es amable y justo debajo de su exterior, Zeus es lo contrario; en su esencia Zeus es un dios egoísta que hace lo que quiere sin tener en cuenta los sentimientos de los demás o las posibles consecuencias de sus acciones. Incluso sus actos de "bondad" tienen sus raíces en el egoísmo. Si no se hacen por su propio interés, se basan en lo que ÉL siente que es amable, no en lo que otros quieren e incluso se realtiarán en aquellos que desprecian sus dones.
+
+                    Es más, nunca acepta la responsabilidad de sus acciones, incluso pareciendo incapaz de reconocer que él juega un papel en ellas.
+                    
+                    Ejemplo de ello:
+
+                    Robó Perséfone como un regalo para Hades preparando el mundo para una guerra entre los dioses. Si bien Hades tenía un interés en la hija de la diosa Deméter, nunca pidió la ayuda de su hermano para llamar su atención, y mucho menos secuestrarla y ciertamente no la vio como un "regalo" que pudiera regalarse como un objeto.
+                </notas>
+        </personaje>
+    </personajes>
+    <niveles>
+        <nivel>
+            <nombre>Tártaro</nombre>
+            <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/9/92/Tartarus_01.jpg/revision/latest?cb=20181213192659</imagen>
+            <trampas>
+                <trampa>Pozos con pinchos</trampa>
+                <trampa>Cañones quimera</trampa>
+                <trampa>Barriles explosivos</trampa>
+            </trampas>
+            <minijefes>
+                <minijefe>
+                    <nombre>Bombardero del infierno</nombre>
+                    <descripcion>Lanza explosivos ardientes que detonan después de unos segundos. También puede lanzar rápidamente múltiples explosivos alrededor de sí mismo para protegerse de los ataques cuerpo a cuerpo. Al morir, deja caer una bomba en su ubicación.</descripcion>
+                </minijefe>
+                <minijefe>
+                    <nombre>Piedra del juicio final</nombre>
+                    <descripcion>Dispara varios haces de energía dañina en un patrón alrededor de sí mismo. El haz no se mueve una vez creado y puede ser corrido a través de inofensivo.</descripcion>
+                </minijefe>
+            </minijefes>
+            <jefes>
+                <jefe>
+                    <nombre>Las Furias</nombre>
+                    <descripcion>Tambien conocidas como las Erinias, las Furias son el jefe del Tártaro. Primero Zagreo se enfrentara a Megaera pero, después de suficientes tentativas, apareceran tambíen las otras dos hermanas, Alecto y Tisífone. Se caracterizan por tener movimientos muy rápidos y dañinos. Disponen de 4400 puntos de vida.</descripcion>
+                </jefe>
+            </jefes>
+            <enemigos>
+                <enemigo>
+                    <nombre>Matón desdichado</nombre>
+                    <descripcion>Balancea su palo en la dirección a la que se enfrentan, infligiendo daño moderado en un amplio arco frente a ellos.</descripcion>
+                </enemigo>
+                 <enemigo>
+                    <nombre>Bruja desdichada</nombre>
+                    <descripcion>Lanza un proyectil en la posición actual del jugador. Este proyectil inflige poco daño y se mueve a una velocidad lenta.</descripcion>
+                </enemigo>
+                 <enemigo>
+                    <nombre>Plaga miserable</nombre>
+                    <descripcion>Lanza minas alrededor de la habitación. Estas minas explotan después de un breve retraso si el jugador camina cerca de ellas, o después de que la Plaga muere.</descripcion>
+                </enemigo>
+            </enemigos>
+        </nivel>
+        <nivel>
+            <nombre>Asfódelos</nombre>
+            <imagen>https://static.wikia.nocookie.net/hades_gamepedia_en/images/5/55/Asphodel_01.JPG/revision/latest?cb=20200628045904</imagen>
+            <trampas>
+                <trampa>Rios de magma</trampa>
+                <trampa>Humo toxico</trampa>
+                <trampa>Barriles explosivos</trampa>
+            </trampas>
+            <minijefes>
+                <minijefe>
+                    <nombre>Trituradora de calaveras</nombre>
+                    <descripcion>Ataca levantándose en el aire, y estrellándose de nuevo en el suelo por encima de Zagreo, infligiendo un gran daño en una onda de choque a su alrededor.</descripcion>
+                </minijefe>
+                <minijefe>
+                    <nombre>Megagorgon</nombre>
+                    <descripcion>Ataques lanzando proyectiles de movimiento lento que infligen el efecto petrificado. Puede disparar tanto un ventilador de proyectiles como una corriente rápida de proyectiles.</descripcion>
+                </minijefe>
+            </minijefes>
+            <jefes>
+                <jefe>
+                    <nombre>Hidra de hueso</nombre>
+                    <descripcion>La hidra de hueso es lo que queda de la Hidra de Lerna, asesinada por el héroe Heracles en unos de sus 12 trabajos. La pelea con la hidra se caracteriza por sus ataques en área, la invocación de enemigos constantemente y el escenario, rodeado entero por la lava que causa gran daño a Zagreo. Cuenta con 5940 puntos de vida.</descripcion>
+                </jefe>
+            </jefes>
+            <enemigos>
+                <enemigo>
+                    <nombre>Gorgona</nombre>
+                    <descripcion>Dispara proyectiles de movimiento lento al jugador que infligen el efecto pretrificado. Estos proyectiles no pueden ser destruidos.</descripcion>
+                </enemigo>
+                 <enemigo>
+                    <nombre>Sinsangre</nombre>
+                    <descripcion>Después de un breve retraso, carga contra el jugador, infligiendo un daño moderado. Una vez que se carga, no puede ser aturdido.</descripcion>
+                </enemigo>
+                 <enemigo>
+                    <nombre>RompeHuesos</nombre>
+                    <descripcion>Después de un breve tiempo, entra en un furioso combo de cuchilladas que infligen alto daño en general. Mientras se está deslizando no puede ser aturdido.</descripcion>
+                </enemigo>
+            </enemigos>
+        </nivel>
+    </niveles>
+</elementos>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="elementos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="objetos" />
+        <xs:element ref="personajes" />
+        <xs:element ref="niveles" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="objetos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="monedas" />
+        <xs:element ref="botines" />
+        <xs:element ref="recuerdos" />
+        <xs:element ref="miscelaneos" />
+        <xs:element ref="armas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="monedas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="moneda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moneda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element ref="obtencion" />
+        <xs:element ref="usos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nombre" type="xs:string" />
+  <xs:element name="descripcion" type="xs:string" />
+  <xs:element name="imagen" type="xs:anyURI" />
+  <xs:element name="obtencion" type="xs:string" />
+  <xs:element name="usos" type="xs:string" />
+  <xs:element name="botines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="botin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="botin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element ref="obtencion" />
+        <xs:element ref="usos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recuerdos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="recuerdo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recuerdo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element ref="efecto" />
+        <xs:element ref="mensaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mensaje" type="xs:string" />
+  <xs:element name="miscelaneos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="miscelaneo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="miscelaneo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element ref="obtencion" />
+        <xs:element ref="notas" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mejoras" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mejoras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mejora" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mejora">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="armas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="arma" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="arma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element ref="estilodecombate" />
+        <xs:element ref="estadisticas" />
+        <xs:element ref="aspectos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="estilodecombate" type="xs:string" />
+  <xs:element name="estadisticas" type="xs:string" />
+  <xs:element name="aspectos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="aspecto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aspecto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="personaje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+        <xs:element ref="imagen" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="bendiciones" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="combate" />
+        <xs:element ref="notas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="notas" type="xs:string" />
+  <xs:element name="combate" type="xs:string" />
+  <xs:element name="bendiciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="bendicion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bendicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="efecto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="efecto" type="xs:string" />
+  <xs:element name="niveles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="nivel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nivel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="imagen" />
+        <xs:element ref="trampas" />
+        <xs:element ref="minijefes" />
+        <xs:element ref="jefes" />
+        <xs:element ref="enemigos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trampas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="trampa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="trampa" type="xs:string" />
+  <xs:element name="minijefes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="minijefe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="minijefe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jefes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="jefe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jefe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enemigos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="enemigo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enemigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre" />
+        <xs:element ref="descripcion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
