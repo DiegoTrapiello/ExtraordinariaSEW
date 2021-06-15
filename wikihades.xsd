@@ -40,7 +40,7 @@
   </xs:element>
   <xs:element name="nombre" type="xs:string" />
   <xs:element name="descripcion" type="xs:string" />
-  <xs:element name="imagen" type="xs:anyURI" />
+  <xs:element name="imagen" type="xs:string" />
   <xs:element name="obtencion" type="xs:string" />
   <xs:element name="usos" type="xs:string" />
   <xs:element name="botines">
